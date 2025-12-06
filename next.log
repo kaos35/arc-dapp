@@ -1,0 +1,37 @@
+ ⚠ `eslint` configuration in next.config.mjs is no longer supported. See more info here: https://nextjs.org/docs/app/api-reference/cli/next#next-lint-options
+ ⚠ Invalid next.config.mjs options detected: 
+ ⚠     Unrecognized key(s) in object: 'appDir' at "experimental"
+ ⚠     Unrecognized key(s) in object: 'eslint'
+ ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /root/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /root/arc-dapp/package-lock.json
+
+   ▲ Next.js 16.0.5 (Turbopack)
+   - Local:         http://localhost:3002
+   - Network:       http://198.7.125.48:3002
+   - Environments: .env.local, .env
+   - Experiments (use with caution):
+     ? appDir (invalid experimental key)
+
+ ✓ Starting...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+ ✓ Ready in 803ms
+ ⚠ Cross origin request detected from 198.7.125.48 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ ○ Compiling / ...
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3002". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 19.4s (compile: 19.0s, render: 454ms)
+ GET /api/health 200 in 442ms (compile: 422ms, render: 19ms)
+ POST /api/intents/store 200 in 157ms (compile: 132ms, render: 25ms)
+ GET /api/intents 200 in 133ms (compile: 124ms, render: 9ms)
+ GET /api/subscriptions/list 200 in 127ms (compile: 112ms, render: 15ms)
+ GET /api/health 200 in 8ms (compile: 3ms, render: 5ms)
+ GET /api/intents 200 in 8ms (compile: 3ms, render: 5ms)
+ GET /api/subscriptions/list 200 in 8ms (compile: 3ms, render: 5ms)
+ GET / 200 in 317ms (compile: 235ms, render: 82ms)
+ ○ Compiling /_not-found/page ...
+ GET /robots.txt 404 in 6.9s (compile: 6.8s, render: 84ms)

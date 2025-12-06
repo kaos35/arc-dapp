@@ -1,0 +1,75 @@
+ ⚠ `eslint` configuration in next.config.mjs is no longer supported. See more info here: https://nextjs.org/docs/app/api-reference/cli/next#next-lint-options
+ ⚠ Invalid next.config.mjs options detected: 
+ ⚠     Unrecognized key(s) in object: 'appDir' at "experimental"
+ ⚠     Unrecognized key(s) in object: 'eslint'
+ ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /root/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /root/arc-dapp/package-lock.json
+
+   ▲ Next.js 16.0.5 (Turbopack)
+   - Local:         http://localhost:3002
+   - Network:       http://0.0.0.0:3002
+   - Environments: .env.local, .env
+   - Experiments (use with caution):
+     ? appDir (invalid experimental key)
+
+ ✓ Starting...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+ ✓ Ready in 624ms
+ GET /api/health 200 in 565ms (compile: 544ms, render: 21ms)
+ GET /api/intents 200 in 160ms (compile: 149ms, render: 11ms)
+ GET /api/subscriptions/list 200 in 126ms (compile: 113ms, render: 13ms)
+ ○ Compiling / ...
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3002". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 23.4s (compile: 23.0s, render: 446ms)
+ GET / 200 in 282ms (compile: 216ms, render: 66ms)
+ ⚠ Cross origin request detected from 198.7.125.48 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+📥 INCOMING REQUEST - subscriptionId: undefined
+ POST /api/intents/store 200 in 427ms (compile: 416ms, render: 12ms)
+ GET /api/intents 200 in 21ms (compile: 5ms, render: 16ms)
+ ○ Compiling /_not-found/page ...
+ POST /api/subscription/save 404 in 6.4s (compile: 6.3s, render: 128ms)
+ GET /api/health 200 in 12ms (compile: 7ms, render: 5ms)
+ GET /api/intents 200 in 15ms (compile: 3ms, render: 12ms)
+ GET /api/subscriptions/list 200 in 8ms (compile: 3ms, render: 5ms)
+📥 INCOMING REQUEST - subscriptionId: 26
+ POST /api/intents/store 200 in 11ms (compile: 3ms, render: 9ms)
+   skipping /api/intents/store (conflict)
+ ⚠ Duplicate page detected. pages/api/intents/store.js and app/api/intents/store/route.ts resolve to /api/intents/store
+ GET / 500 in 1583ms (compile: 1446ms, render: 137ms)
+ GET / 500 in 187ms (compile: 177ms, render: 10ms)
+ GET / 500 in 193ms (compile: 182ms, render: 11ms)
+ GET / 500 in 161ms (compile: 152ms, render: 9ms)
+ GET / 500 in 157ms (compile: 149ms, render: 8ms)
+ GET / 500 in 179ms (compile: 170ms, render: 9ms)
+ GET / 500 in 167ms (compile: 159ms, render: 8ms)
+ GET / 500 in 166ms (compile: 157ms, render: 9ms)
+ GET / 500 in 173ms (compile: 163ms, render: 10ms)
+ GET / 500 in 171ms (compile: 161ms, render: 9ms)
+ GET / 500 in 163ms (compile: 155ms, render: 8ms)
+ GET / 500 in 171ms (compile: 163ms, render: 8ms)
+ GET / 500 in 218ms (compile: 209ms, render: 9ms)
+ GET / 500 in 171ms (compile: 163ms, render: 8ms)
+ GET / 500 in 211ms (compile: 204ms, render: 7ms)
+ GET / 500 in 186ms (compile: 176ms, render: 11ms)
+ GET / 500 in 183ms (compile: 175ms, render: 7ms)
+ GET / 500 in 175ms (compile: 167ms, render: 9ms)
+ POST /api/intents/store 500 in 249ms (compile: 240ms, render: 9ms)
+ POST /api/intents/store 500 in 239ms (compile: 227ms, render: 12ms)
+ GET /api/health 500 in 13ms (compile: 6ms, render: 8ms)
+ GET /api/health 500 in 12ms (compile: 5ms, render: 8ms)
+ GET /api/intents 500 in 12ms (compile: 5ms, render: 7ms)
+ GET /api/intents 500 in 12ms (compile: 5ms, render: 7ms)
+ GET /api/subscriptions/list 500 in 15ms (compile: 6ms, render: 9ms)
+ GET /api/subscriptions/list 500 in 11ms (compile: 4ms, render: 7ms)
+ GET / 500 in 170ms (compile: 161ms, render: 8ms)
+ POST /api/intents/store 500 in 220ms (compile: 209ms, render: 11ms)
+ POST /api/intents/store 500 in 192ms (compile: 183ms, render: 9ms)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3002". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 655ms (compile: 310ms, render: 346ms)
+[?25h
