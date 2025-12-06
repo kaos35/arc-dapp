@@ -1,4 +1,3 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
 
@@ -10,20 +9,18 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
 
+  // Turbopack’i %100 devre dışı bırak
   experimental: {
-    // ❗ Turbopack kapalı — Vercel hatasının ana çözümü
-    turbo: false,
+    turbo: {
+      rules: {
+        '*': false,
+      },
+    },
   },
 
-  webpack: (config) => {
-    // ❗ Build sırasında problem çıkaran modülleri dışa alıyoruz
-    config.externals.push(
-      "pino-pretty",
-      "lokijs",
-      "encoding",
-      "thread-stream"
-    );
-
+  // Build'i Webpack'e zorluyoruz
+  webpack(config, { isServer }) {
+    config.infrastructureLogging = { level: 'error' };
     return config;
   },
 };
