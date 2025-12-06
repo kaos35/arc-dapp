@@ -1,0 +1,11 @@
+[
+  {
+    "user": "0x88be079974b9c36e1983F8F3f7FCB67F8059c26d",
+    "to": "0x88be079974b9c36e1983F8F3f7FCB67F8059c26d",
+    "token": "USDC",
+    "amount": "0.1",
+    "interval": "daily",
+    "nextPayment": 1764866000000,
+    "active": false
+  }
+]

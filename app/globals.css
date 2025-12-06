@@ -1,0 +1,523 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #1e3358 0%, #090e27 45%, #040713 100%);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", sans-serif;
+  color: white;
+}
+
+/* LAYOUT */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 24px;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* =========================================
+   GLASS CARD — PREMIUM GENİŞLETİLMİŞ
+========================================= */
+.glass-card {
+  width: 560px;
+  min-height: 380px;
+  padding: 40px;
+  border-radius: 24px;
+
+  background: rgba(10, 14, 40, 0.75);
+  backdrop-filter: blur(20px) saturate(150%);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.65),
+    0 0 40px rgba(0, 229, 255, 0.25);
+
+  transition: 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 28px 60px rgba(0, 0, 0, 0.75),
+    0 0 65px rgba(0, 229, 255, 0.45);
+}
+
+/* TYPO */
+.heading-xl {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.text-muted {
+  color: rgba(200, 210, 255, 0.85);
+}
+
+/* INPUT */
+.input,
+.select {
+  width: 100%;
+  padding: 12px 14px;
+  background: rgba(8, 12, 32, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  color: white;
+}
+
+.input:focus {
+  border-color: #00e5ff;
+  box-shadow: 0 0 0 2px rgba(0, 229, 255, 0.35);
+}
+
+/* PRIMARY BUTTON */
+.btn-primary {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #00e5ff, #4b7bff);
+  border: none;
+  color: #020617;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.15s ease;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.05);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* =========================================
+   PREMIUM NAVBAR
+========================================= */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 28px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.10), rgba(4, 7, 23, 0.80));
+  border: 1px solid rgba(148, 163, 255, 0.22);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-title-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-title {
+  font-weight: 650;
+  font-size: 16px;
+}
+
+.nav-sub {
+  font-size: 11px;
+  opacity: 0.75;
+}
+
+/* =========================================
+   ARC LOGO — EDGE GLOW + LASER PREMIUM
+========================================= */
+.arc-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  object-fit: contain; /* ← cover değil, contain yap — LOGO KIRPILMASIN */
+
+  /* Inner glow */
+  box-shadow:
+    0 0 12px rgba(0, 229, 255, 0.45),
+    0 0 26px rgba(0, 229, 255, 0.35),
+    0 0 50px rgba(0, 229, 255, 0.22);
+
+  /* Outer halo */
+  filter: drop-shadow(0 0 18px rgba(0, 229, 255, 0.35))
+          drop-shadow(0 0 32px rgba(0, 229, 255, 0.25));
+
+  transition: all 0.28s ease;
+}
+
+.arc-logo:hover {
+  transform: scale(1.12);
+
+  /* Hover laser burst */
+  box-shadow:
+    0 0 18px rgba(0, 229, 255, 0.75),
+    0 0 36px rgba(0, 229, 255, 0.55),
+    0 0 75px rgba(0, 229, 255, 0.40);
+
+  filter: drop-shadow(0 0 35px rgba(0, 229, 255, 0.7))
+          drop-shadow(0 0 65px rgba(0, 229, 255, 0.5));
+}
+
+/* =========================================
+   NAV MENU BUTTONS
+========================================= */
+.nav-item {
+  position: relative;
+  padding: 8px 16px;
+  border-radius: 14px;
+  font-size: 14px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  color: #e7ecff;
+
+  border: 1px solid rgba(0, 229, 255, 0.35);
+
+  transition: all 0.25s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.nav-item.small {
+  padding: 6px 14px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.nav-item::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  z-index: -1;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0, 229, 255, 0.4),
+    rgba(148, 163, 255, 0.4),
+    rgba(168, 85, 247, 0.4),
+    rgba(0, 229, 255, 0.4)
+  );
+
+  background-size: 300% 100%;
+  animation: neonMove 4s linear infinite;
+
+  filter: blur(8px);
+  opacity: 0.35;
+}
+
+.nav-item:hover {
+  border-color: rgba(0, 229, 255, 0.8);
+  background: rgba(0, 229, 255, 0.14);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(0, 229, 255, 0.5);
+}
+
+@keyframes neonMove {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 300% 0%; }
+}
+
+/* =========================================
+   RainbowKit FIX
+========================================= */
+.rk-connect-button,
+.rk-connect-button > button {
+  border-radius: 14px !important;
+  padding: 8px 18px !important;
+
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(0,229,255,0.4) !important;
+  backdrop-filter: blur(6px) !important;
+
+  color: #fff !important;
+  font-weight: 600 !important;
+  transition: 0.25s ease !important;
+}
+
+.rk-connect-button:hover,
+.rk-connect-button > button:hover {
+  background: rgba(0,229,255,0.14) !important;
+  border-color: rgba(0,229,255,0.85) !important;
+  box-shadow: 0 0 16px rgba(0,229,255,0.5) !important;
+  transform: translateY(-2px);
+}
+
+/* RIGHT SIDE SPACING */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* HERO */
+.hero {
+  margin-top: 10px;
+  padding: 20px;
+  text-align: center;
+  max-width: 980px;
+  margin-inline: auto;
+}
+
+.hero-title {
+  font-size: clamp(40px, 5vw, 56px);
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.5px;
+
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.25),
+    0 0 20px rgba(0,229,255,0.25);
+}
+
+.hero-inline {
+  display: inline-block;
+
+  background: linear-gradient(
+    90deg,
+    #00eaff,
+    #27f5ff,
+    #59faff,
+    #63c8ff
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  text-shadow:
+    0 0 12px rgba(0,229,255,0.9),
+    0 0 22px rgba(0,229,255,0.6);
+}
+
+.hero-subtitle {
+  margin-top: 14px;
+  font-size: 15px;
+  max-width: 640px;
+  margin-inline: auto;  color: rgba(209, 213, 255, 0.9);
+}
+
+
+/* ================================
+   PREMIUM ARC BACKGROUND
+   ================================ */
+
+.app-body {
+  background: linear-gradient(to bottom, #03192f, #061c30, #081d2f);
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ======================================
+   ARC ANIMATION CONTAINER
+   ====================================== */
+
+.arc-lines {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ======================================
+   YATAY PARLAK BLOKLAR
+   ====================================== */
+
+.arc-line {
+  position: absolute;
+  height: 3px;               /* KALINLIK */
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 6px;        /* Yumuşak hat */
+  filter: blur(1.0px);       /* Premium parıltı */
+  opacity: 0.50;
+
+  /* Rastgele uzunluklar */
+  width: calc(80px + (var(--i) * 6px));
+
+  /* Rastgele yukarıdan aşağı pozisyon */
+  top: calc(var(--i) * 4%);
+
+  /* YAVAŞ AKIŞ – her blok farklı hızda */
+  animation: arcMove linear infinite;
+  animation-duration: calc(18s + (var(--i) * 6.1s));
+  animation-delay: calc(var(--i) * -0.5s);
+}
+
+/* ======================================
+   ANİMASYON → Sağdan sola akış
+   ====================================== */
+
+@keyframes arcMove {
+  from {
+    transform: translateX(130vw);
+  }
+  to {
+    transform: translateX(-130vw);
+  }
+}
+
+.faucet-btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #00eaff, #4d8bff);
+  border: none;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.faucet-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.faucet-btn:active {
+  transform: scale(0.97);
+}
+
+/* ==== DROPDOWN FIXES ==== */
+.nav-root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 26px;
+  position: relative;
+  z-index: 20;
+}
+
+.nav-btn {
+  background: rgba(20,40,70,0.65);
+  padding: 8px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  cursor: pointer;
+  color: #e5e8ff;
+  font-size: 14px;
+}
+.nav-btn.small {
+  padding: 6px 14px;
+}
+
+.nav-faucet-wrapper {
+  position: relative;
+}
+
+.faucet-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: #0d1421;
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 170px;
+  z-index: 9999;
+}
+
+.faucet-item {
+  background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  color: #000;
+  font-weight: 600;
+  font-size: 14px;
+}
+.faucet-item:hover {
+  opacity: 0.85;
+}
+
+/* DROPDOWN WRAPPER sabitleniyor */
+.faucet-dropdown-wrapper {
+  position: relative;
+}
+
+/* Aşağı açılacak kutu */
+.faucet-dropdown-menu {
+  position: absolute;
+  top: 38px; /* Faucet butonunun altına tam oturur */
+  right: 0;
+  width: 180px;
+  background: #0d1524;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 9999;
+}
+
+/* NavBar sağının kaymasını engeller */
+.nav-right {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  position: relative;
+}
+
+.dropdown-btn {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background: linear-gradient(to right, #00eaff, #4b7bff);
+  color: black;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+}
+
+.dropdown-btn:hover {
+  opacity: 0.9;
+}
+
+
+
+
+/* ================================
+   RASTGELE BAR ÜRETİCİ
+   ================================ */
+
+.arc-lines .arc-line:nth-child(1) { width: 180px; top: 8%;  animation-duration: 7s;  opacity: 0.25; }
+.arc-lines .arc-line:nth-child(2) { width: 260px; top: 12%; animation-duration: 10s; opacity: 0.18; }
+.arc-lines .arc-line:nth-child(3) { width: 90px;  top: 18%; animation-duration: 6s;  opacity: 0.22; }
+.arc-lines .arc-line:nth-child(4) { width: 320px; top: 25%; animation-duration: 12s; opacity: 0.15; }
+.arc-lines .arc-line:nth-child(5) { width: 140px; top: 33%; animation-duration: 8s;  opacity: 0.28; }
+.arc-lines .arc-line:nth-child(6) { width: 230px; top: 40%; animation-duration: 11s; opacity: 0.2; }
+.arc-lines .arc-line:nth-child(7) { width: 300px; top: 47%; animation-duration: 9s; opacity: 0.25; }
+.arc-lines .arc-line:nth-child(8) { width: 110px; top: 55%; animation-duration: 7s; opacity: 0.27; }
+.arc-lines .arc-line:nth-child(9) { width: 270px; top: 62%; animation-duration: 13s; opacity: 0.18; }
+.arc-lines .arc-line:nth-child(10){ width: 200px; top: 72%; animation-duration: 8s; opacity: 0.3; }
+.arc-lines .arc-line:nth-child(11){ width: 340px; top: 78%; animation-duration: 11s; opacity: 0.16; }
+.arc-lines .arc-line:nth-child(12){ width: 150px; top: 88%; animation-duration: 6.5s; opacity: 0.26; }
+

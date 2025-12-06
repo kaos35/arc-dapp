@@ -1,0 +1,117 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/root/arc-dapp/contracts/PaymentRouter.sol": {
+      "lastModificationDate": 1764872568335,
+      "contentHash": "0e66c948dfab4c536cd71d59b3b413fc",
+      "sourceName": "contracts/PaymentRouter.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./AllowanceVault.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC20",
+        "PaymentRouter"
+      ]
+    },
+    "/root/arc-dapp/contracts/SubscriptionManager.sol": {
+      "lastModificationDate": 1764967276144,
+      "contentHash": "d5eb70c0faf85db0a59fdc4204c53c5f",
+      "sourceName": "contracts/SubscriptionManager.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IPaymentRouter",
+        "SubscriptionManager"
+      ]
+    },
+    "/root/arc-dapp/contracts/AllowanceVault.sol": {
+      "lastModificationDate": 1764872263640,
+      "contentHash": "7eda10688c51e1174c95e52732652136",
+      "sourceName": "contracts/AllowanceVault.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "AllowanceVault"
+      ]
+    }
+  }
+}
