@@ -35,3 +35,32 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET / 200 in 317ms (compile: 235ms, render: 82ms)
  ○ Compiling /_not-found/page ...
  GET /robots.txt 404 in 6.9s (compile: 6.8s, render: 84ms)
+ ⚠ Found a change in next.config.mjs. Restarting the server to apply the changes...
+ ⚠ `eslint` configuration in next.config.mjs is no longer supported. See more info here: https://nextjs.org/docs/app/api-reference/cli/next#next-lint-options
+ ⚠ Invalid next.config.mjs options detected: 
+ ⚠     Unrecognized key(s) in object: 'appDir', 'turbo' at "experimental"
+ ⚠     Unrecognized key(s) in object: 'eslint'
+ ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /root/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /root/arc-dapp/package-lock.json
+
+   ▲ Next.js 16.0.5 (Turbopack)
+   - Local:         http://localhost:3002
+   - Network:       http://198.7.125.48:3002
+   - Environments: .env.local, .env
+   - Experiments (use with caution):
+     ? appDir (invalid experimental key)
+     ? turbo (invalid experimental key)
+
+ ✓ Starting...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+ ✓ Ready in 840ms
+ ⚠ Cross origin request detected from 198.7.125.48 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ ○ Compiling / ...
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3002". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 20.5s (compile: 20.1s, render: 433ms)
