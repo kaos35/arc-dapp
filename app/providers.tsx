@@ -22,7 +22,6 @@ export default function Providers({ children }: { children: React.ReactNode }) {
     <WagmiConfig config={wagmiConfig}>
       <QueryClientProvider client={queryClient}>
         <RainbowKitProvider
-          chains={[arcTestnet]}
           theme={darkTheme()}
           appInfo={{ appName: "Arc Network" }}
         >
