@@ -16,19 +16,28 @@ export async function GET(
     try {
       const data = await fs.readFile(INTENT_FILE, "utf8");
       db = JSON.parse(data);
-    } catch (error) {
-      return NextResponse.json({ error: "No intents found" }, { status: 404 });
+    } catch {
+      return NextResponse.json(
+        { error: "No intents found" },
+        { status: 404 }
+      );
     }
 
-    const intent = db[id] || null;
+    const intent = db[id] ?? null;
 
-    if (intent) {
-      return NextResponse.json(intent);
-    } else {
-      return NextResponse.json({ error: "Intent not found" }, { status: 404 });
+    if (!intent) {
+      return NextResponse.json(
+        { error: "Intent not found" },
+        { status: 404 }
+      );
     }
+
+    return NextResponse.json(intent);
   } catch (error: any) {
-    console.error("Intent get error:", error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Intent GET error:", error);
+    return NextResponse.json(
+      { error: error.message },
+      { status: 500 }
+    );
   }
 }
