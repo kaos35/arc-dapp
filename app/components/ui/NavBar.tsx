@@ -3,7 +3,10 @@
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Link from "next/link";
 
-export default function NavBar({ onFaucetClick, onGetVnsArc }) {
+export default function NavBar({
+  onFaucetClick = () => {},
+  onGetVnsArc = () => {},
+}) {
   return (
     <nav className="navbar">
       <div className="nav-left">
@@ -15,21 +18,11 @@ export default function NavBar({ onFaucetClick, onGetVnsArc }) {
       </div>
 
       <div className="nav-right">
-
-        {/* Circle Faucet */}
-        <a
-          href="https://faucet.circle.com/"
-          target="_blank"
-          className="nav-item small"
-        >
+        <a href="https://faucet.circle.com/" target="_blank" className="nav-item small">
           Faucet
         </a>
 
-        {/* Get VNS + ARC */}
-        <button
-          className="nav-item small"
-          onClick={onGetVnsArc}
-        >
+        <button className="nav-item small" onClick={onGetVnsArc}>
           Get VNS & ARC
         </button>
 
@@ -41,12 +34,7 @@ export default function NavBar({ onFaucetClick, onGetVnsArc }) {
           Discord
         </Link>
 
-        {/* CONNECT WALLET */}
-        <ConnectButton
-          accountStatus="address"
-          chainStatus="icon"
-          showBalance={false}
-        />
+        <ConnectButton accountStatus="address" chainStatus="icon" showBalance={false} />
       </div>
     </nav>
   );

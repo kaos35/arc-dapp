@@ -1,5 +1,6 @@
 "use client";
 
+import type { Address, Hash } from "viem";
 import { useState } from "react";
 import {
   useAccount,
@@ -9,7 +10,6 @@ import {
   useSignTypedData,
 } from "wagmi";
 
-import type { Address, Hash } from "viem";
 import { parseUnits, decodeEventLog } from "viem";
 
 /* ======================================================
@@ -442,14 +442,14 @@ export default function Home() {
 
       // DEBUG: Validate payload before sending
       console.log("🔍 DEBUG PAYLOAD VALIDATION:");
-      
+
       // Check for undefined values
       const validatePayload = (obj: any, path: string = ''): string[] => {
         const errors: string[] = [];
         for (const key in obj) {
           const currentPath = path ? `${path}.${key}` : key;
           const value = obj[key];
-          
+
           if (value === undefined) {
             errors.push(`${currentPath} is undefined`);
           } else if (value === null) {
@@ -705,3 +705,4 @@ export default function Home() {
     </div>
   );
 }
+
