@@ -6,6 +6,10 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
 
+  experimental: {
+    turbo: false, // Turbopack'ı tamamen kapat
+  },
+
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {
@@ -18,16 +22,6 @@ const nextConfig = {
         worker_threads: false,
       };
     }
-
-    config.module.rules.push({
-      test: /thread-stream\/test\/.*\.(js|ts|mjs)$/,
-      use: 'null-loader'
-    });
-
-    config.module.rules.push({
-      test: /\.(md|txt|LICENSE|zip)$/,
-      use: 'null-loader'
-    });
 
     return config;
   },
