@@ -12,6 +12,7 @@ export async function GET(
     const id = context.params.id;
 
     let db: any = {};
+
     try {
       const data = await fs.readFile(INTENT_FILE, "utf8");
       db = JSON.parse(data);
@@ -32,7 +33,6 @@ export async function GET(
 
     return NextResponse.json(intent);
   } catch (error: any) {
-    console.error("Intent GET error:", error);
     return NextResponse.json(
       { error: error.message },
       { status: 500 }
