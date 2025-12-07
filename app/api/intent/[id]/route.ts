@@ -11,7 +11,6 @@ export async function GET(
   try {
     const id = context.params.id;
 
-    // Dosyayı oku
     let db: any = {};
     try {
       const data = await fs.readFile(INTENT_FILE, "utf8");
@@ -23,8 +22,7 @@ export async function GET(
       );
     }
 
-    const intent = db[id] ?? null;
-
+    const intent = db[id];
     if (!intent) {
       return NextResponse.json(
         { error: "Intent not found" },
