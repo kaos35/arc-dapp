@@ -7,7 +7,7 @@ const nextConfig = {
   },
 
   experimental: {
-    turbo: false, // Turbopack'ı tamamen kapat
+    turbo: {}, // ← boş obje, Next bunu kabul ediyor
   },
 
   webpack: (config, { isServer }) => {
