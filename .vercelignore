@@ -1,0 +1,33 @@
+# =========================
+# Docs & meta (deploy yok)
+# =========================
+README.md
+*.md
+
+# =========================
+# Logs & local artifacts
+# =========================
+*.log
+arc-dapp.log
+next.log
+next-*.log
+
+# =========================
+# Local & build caches
+# =========================
+.next/
+cache/
+node_modules/
+
+# =========================
+# Local-only data
+# =========================
+.env*
+subscriptions.json
+intents.json
+
+# =========================
+# Dev / backup / misc
+# =========================
+_backup/
+.vercel/
