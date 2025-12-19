@@ -92,4 +92,4 @@ Built with Arc and USDC as first-class primitives.
 - Live Demo: https://arcpayai.xyz  
 - GitHub: https://github.com/kaos35/arc-dapp
 
-<!-- test: no deploy -->
+
