@@ -27,7 +27,7 @@ export function BalanceARC() {
     args: address ? [address] : undefined,
   });
 
-  const formatted = balance ? formatUnits(balance, 18) : "0";
+  const formatted = balance ? formatUnits(balance as bigint, 18) : "0";
 
   return (
     <div

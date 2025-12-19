@@ -1,22 +1,27 @@
-// Arc Testnet chain config (Viem / Wagmi)
-export const arcTestnet = {
+import { defineChain } from "viem";
+
+export const arcTestnet = defineChain({
   id: 5042002,
   name: "Arc Testnet",
   network: "arc-testnet",
   nativeCurrency: {
-    name: "USDC (Gas)",
+    decimals: 18,
+    name: "USDC",
     symbol: "USDC",
-    decimals: 6,
   },
   rpcUrls: {
-    default: { http: ["https://rpc.testnet.arc.network/"] },
-    public: { http: ["https://rpc.testnet.arc.network/"] },
+    default: {
+      http: ["https://rpc.testnet.arc.network"],
+    },
+    public: {
+      http: ["https://rpc.testnet.arc.network"],
+    },
   },
   blockExplorers: {
     default: {
       name: "Arc Explorer",
-      url: "https://testnet.arcscan.app/",
+      url: "https://testnet.arcscan.app",
     },
   },
   testnet: true,
-} as const;
+});

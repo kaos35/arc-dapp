@@ -1,4 +1,9 @@
 /* RESET */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -38,9 +43,9 @@ body {
    GLASS CARD — PREMIUM GENİŞLETİLMİŞ
 ========================================= */
 .glass-card {
-  width: 560px;
-  min-height: 380px;
-  padding: 40px;
+  width: 460px;
+  min-height: 280px;
+  padding: 20px;
   border-radius: 24px;
 
   background: rgba(10, 14, 40, 0.75);
@@ -154,7 +159,7 @@ body {
   width: 64px;
   height: 64px;
   border-radius: 12px;
-  object-fit: contain; /* ← cover değil, contain yap — LOGO KIRPILMASIN */
+  object-fit: contain; /* 
 
   /* Inner glow */
   box-shadow:
@@ -402,104 +407,9 @@ body {
   transform: scale(0.97);
 }
 
-/* ==== DROPDOWN FIXES ==== */
-.nav-root {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 26px;
-  position: relative;
-  z-index: 20;
-}
 
-.nav-btn {
-  background: rgba(20,40,70,0.65);
-  padding: 8px 18px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.12);
-  cursor: pointer;
-  color: #e5e8ff;
-  font-size: 14px;
-}
-.nav-btn.small {
-  padding: 6px 14px;
-}
 
-.nav-faucet-wrapper {
-  position: relative;
-}
 
-.faucet-dropdown {
-  position: absolute;
-  top: 40px;
-  right: 0;
-  background: #0d1421;
-  border-radius: 12px;
-  padding: 10px;
-  border: 1px solid rgba(255,255,255,0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 170px;
-  z-index: 9999;
-}
-
-.faucet-item {
-  background: linear-gradient(90deg, #00d2ff, #3a7bd5);
-  padding: 10px 12px;
-  border-radius: 10px;
-  text-align: center;
-  cursor: pointer;
-  color: #000;
-  font-weight: 600;
-  font-size: 14px;
-}
-.faucet-item:hover {
-  opacity: 0.85;
-}
-
-/* DROPDOWN WRAPPER sabitleniyor */
-.faucet-dropdown-wrapper {
-  position: relative;
-}
-
-/* Aşağı açılacak kutu */
-.faucet-dropdown-menu {
-  position: absolute;
-  top: 38px; /* Faucet butonunun altına tam oturur */
-  right: 0;
-  width: 180px;
-  background: #0d1524;
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 10px;
-  padding: 10px;
-  z-index: 9999;
-}
-
-/* NavBar sağının kaymasını engeller */
-.nav-right {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  position: relative;
-}
-
-.dropdown-btn {
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
-  background: linear-gradient(to right, #00eaff, #4b7bff);
-  color: black;
-  border-radius: 8px;
-  margin-bottom: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  display: block;
-}
-
-.dropdown-btn:hover {
-  opacity: 0.9;
-}
 
 
 

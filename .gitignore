@@ -5,3 +5,5 @@ out/
 .cache/
 *.log
 .env
+.vercel
+.env.*
