@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ArcPay AI
 
-## Getting Started
+**ArcPay AI** is an AI-assisted recurring payments infrastructure built on **Arc**, leveraging **USDC** for predictable, programmable, and automated payments.
 
-First, run the development server:
+The project combines smart contract–based subscriptions with an off-chain AI Agent that autonomously executes payments using signed intents.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## What Problem Does ArcPay AI Solve?
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Recurring payments today are:
+- rigid,
+- opaque,
+- and difficult to automate safely.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+ArcPay AI introduces:
+- **on-chain subscription logic**
+- **AI-driven execution**
+- **USDC-based stability**
 
-## Learn More
+This enables programmable subscriptions that can be triggered without user interaction, while preserving user control and transparency.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Key Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 🔁 **On-chain Subscriptions**  
+  Subscriptions are created and managed via smart contracts on Arc.
 
-## Deploy on Vercel
+- 🤖 **AI Agent Automation**  
+  An AI Agent processes due subscriptions and executes payments using signed intents.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 💵 **USDC Native Payments**  
+  Payments are settled in USDC for predictable value and real-world usability.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- ⏱️ **Cron-based Execution**  
+  Subscription processing is handled via scheduled backend jobs (cron).
+
+- 🔍 **Full Transparency**  
+  Subscription state and execution are verifiable on-chain.
+
+---
+
+## Architecture Overview
+
+- **Smart Contracts**
+  - Subscription creation & cancellation
+  - Payment scheduling logic
+
+- **Backend (API + Cron)**
+  - Detects due subscriptions
+  - Triggers AI Agent execution
+
+- **Frontend (Next.js)**
+  - Subscription creation
+  - Active subscription management
+
+---
+
+## Open Source
+
+ArcPay AI is **partially open source** by design.
+
+- Core smart contracts and protocol interfaces are open source for auditability.
+- The project is built to encourage community feedback and future contributions.
+- Certain automation and agent components are evolving and subject to iteration.
+
+---
+
+## Deployment Status
+
+- **Current Network:** Arc Testnet
+- **Mainnet:** Planned after validation and feedback
+- **Domain:** https://arcpayai.xyz
+
+---
+
+## Vision
+
+ArcPay AI aims to become a composable payment automation layer for:
+- SaaS subscriptions
+- Creator payments
+- DAO recurring payouts
+- AI-native financial workflows
+
+Built with Arc and USDC as first-class primitives.
+
+---
+
+## Links
+
+- Live Demo: https://arcpayai.xyz  
+- GitHub: https://github.com/kaos35/arc-dapp
